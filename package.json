@@ -1,6 +1,6 @@
 {
   "name": "superagent-dedupe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dedupe in-flight requests.",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,20 @@
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-standard-pkg", {"exclude": ["**/?(*.)+(test).js"]}],
-      ["@pika/plugin-build-node"],
-      ["@pika/plugin-build-web"]
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "**/?(*.)+(test).js"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
     ]
   },
   "author": "gpbmike@gmail.com",
